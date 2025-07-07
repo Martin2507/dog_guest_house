@@ -153,6 +153,8 @@ export default function Home()
         </div>
       </section>
 
+            <p>TEST</p>
+
       {/* Footer */}
       <footer className="py-10 px-4 text-white">
         <div className="max-w-3xl mx-auto text-center">
