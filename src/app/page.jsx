@@ -134,7 +134,7 @@ export default function Home()
               <p className="text-gray-700 mb-4">
                 If you're unable to drop off your furry companion, we can collect them for you within 50km of Newcastle West.
               </p>
-              <p className="text-2xl font-semibold">€30/Dog</p>
+              <p className="text-2xl font-semibold">€30</p>
             </div>
           </div>
         </div>
