@@ -5,15 +5,32 @@ import { useState } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
-export default function Home() {
-  const [galleryImages] = useState([
-    '/image_1.jpeg',
-    '/image_2.jpeg',
-    '/image_3.jpeg',
-    '/image_4.jpeg',
-    '/image_5.jpeg',
-    '/image_6.jpeg',
-  ]);
+export default function Home() 
+{
+  const [dogGallery] = useState
+  (
+    [
+      '/image_1.jpeg',
+      '/image_2.jpeg',
+      '/image_3.jpeg',
+      '/image_4.jpeg',
+      '/image_5.jpeg',
+      '/image_6.jpeg',
+      '/image_7.jpeg',
+      '/image_8.jpeg',
+    ]
+  );
+
+  const [houseGallery] = useState
+  (
+    [
+      "/Outside_Photo_2.jpeg",
+      "/Outside_Photo_3.jpeg",
+      "/Outside_Photo_4.jpeg",
+      "/Outside_Photo_5.jpeg",
+      "/Outside_Photo_6.jpeg",
+    ]
+  )
 
   return (
     <main className="font-[Verdana] text-lg min-h-screen bg-gradient-to-b from-[#fffbed] via-[#F4C18A] to-[#B97E5A]">
@@ -69,15 +86,13 @@ export default function Home() {
               We also make sure to keep you updated by sending videos and/or pictures of your furry friend so you are aware of their wellbeing at all times.
             </p>
           </div>
-          <div>
-            <Image
-              src="/Outside_Photo_2.jpeg"
-              alt="Why Choose Us"
-              width={600}
-              height={400}
-              className="rounded-xl mx-auto"
-            />
-          </div>
+          <Carousel showThumbs={false} infiniteLoop autoPlay>
+            {houseGallery.map((img, idx) => (
+              <div key={idx}>
+                <Image src={img} alt={`House Image: ${idx + 1}`} width={600} height={400} className="mx-auto rounded-xl"/>
+              </div>
+            ))}
+          </Carousel>
         </div>
       </section>
 
@@ -86,15 +101,9 @@ export default function Home() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-semibold text-center mb-6 text-gray-800">Our Happy Clients</h2>
           <Carousel showThumbs={false} infiniteLoop autoPlay>
-            {galleryImages.map((img, idx) => (
+            {dogGallery.map((img, idx) => (
               <div key={idx}>
-                <Image
-                  src={img}
-                  alt={`Dog ${idx + 1}`}
-                  width={800}
-                  height={500}
-                  className="mx-auto rounded-xl"
-                />
+                <Image src={img} alt={`Dog ${idx + 1}`} width={800} height={500} className="mx-auto rounded-xl"/>
               </div>
             ))}
           </Carousel>
