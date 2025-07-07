@@ -116,7 +116,7 @@ export default function Home()
           <h2 className="text-3xl font-semibold text-center mb-6 text-gray-800">Pricing</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white bg-opacity-90 p-6 rounded-xl shadow-md">
-              <h3 className="text-2xl font-bold mb-2">Day Care</h3>
+              <h3 className="text-2xl font-bold mb-2">Pet Boarding</h3>
               <p className="text-gray-700 mb-4">
                 Supervised care 24/7, including walks, playtime, rest, and overnight monitoring in a safe, loving environment.
               </p>
